@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual Environment
+venv/
+
+# Dataset
+dataset/
+
+# Trained Models
+*.pth
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+
+# Output files
+outputs/
