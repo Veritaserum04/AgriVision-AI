@@ -12,8 +12,12 @@ An end-to-end deep learning application for **plant disease detection** using **
 - Supports Apple Silicon (MPS) acceleration
 
 ---
-##Screenshot
+
+## 📸 Screenshot
+
 <img width="1470" height="956" alt="demo" src="https://github.com/user-attachments/assets/fc52172d-a285-4af8-b4c9-3bc5e4cde1ab" />
+
+---
 
 ## 📊 Model Performance
 
@@ -23,7 +27,7 @@ An end-to-end deep learning application for **plant disease detection** using **
 | Images | 20,638 |
 | Classes | 15 |
 | Architecture | ResNet18 |
-| Validation Accuracy | **93.60%** |
+| Validation Accuracy | **99.37%** |
 
 ---
 
@@ -41,12 +45,13 @@ An end-to-end deep learning application for **plant disease detection** using **
 
 ## 📂 Project Structure
 
-```
+```text
 AgriVision-AI
 │
 ├── app.py
 ├── predict.py
 ├── train.py
+├── disease_info.py
 ├── models/
 ├── utils/
 ├── requirements.txt
@@ -80,10 +85,10 @@ PlantVillage Dataset
 
 ## 🎯 Future Improvements
 
-- Fine-tune deeper ResNet layers
-- Deploy online
-- Add disease descriptions and treatment recommendations
-- Improve prediction interface
+- Deploy online (Hugging Face Spaces)
+- Add confidence visualization
+- Improve UI/UX
+- Support more crop species
 
 ---
 

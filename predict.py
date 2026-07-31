@@ -3,7 +3,12 @@ from torchvision import transforms
 from PIL import Image
 
 from models.model import get_model
-from utils.dataset import DEVICE
+
+DEVICE = torch.device(
+    "mps" if torch.backends.mps.is_available()
+    else "cuda" if torch.cuda.is_available()
+    else "cpu"
+)
 
 CLASS_NAMES = [
     "Pepper__bell___Bacterial_spot",
@@ -29,9 +34,17 @@ model.to(DEVICE)
 model.eval()
 
 transform = transforms.Compose([
-    transforms.Resize((224,224)),
+    transforms.Resize((224, 224)),
     transforms.ToTensor(),
 ])
+
+
+def format_disease_name(name):
+    name = name.replace("___", " ")
+    name = name.replace("__", " ")
+    name = name.replace("_", " ")
+    return name
+
 
 def predict_image(image):
 
@@ -39,9 +52,9 @@ def predict_image(image):
 
     with torch.no_grad():
         output = model(image)
-
         probs = torch.softmax(output, dim=1)
+        confidence, pred = torch.max(probs, 1)
 
-        confidence, pred = torch.max(probs,1)
+    disease = format_disease_name(CLASS_NAMES[pred.item()])
 
-    return CLASS_NAMES[pred.item()], confidence.item()*100
+    return disease, confidence.item() * 100
