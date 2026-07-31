@@ -13,7 +13,7 @@ An end-to-end deep learning application for **plant disease detection** using **
 
 ---
 
-##Deployed on Render: https://agrivision-ai-ux4p.onrender.com
+## Live Demo: https://agrivision-ai-ux4p.onrender.com
 
 ## 📸 Screenshot
 
