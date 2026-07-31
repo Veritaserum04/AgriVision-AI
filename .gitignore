@@ -8,8 +8,6 @@ venv/
 # Dataset
 dataset/
 
-# Trained Models
-*.pth
 
 # macOS
 .DS_Store
