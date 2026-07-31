@@ -12,6 +12,8 @@ An end-to-end deep learning application for **plant disease detection** using **
 - Supports Apple Silicon (MPS) acceleration
 
 ---
+##Screenshot
+<img width="1470" height="956" alt="demo" src="https://github.com/user-attachments/assets/fc52172d-a285-4af8-b4c9-3bc5e4cde1ab" />
 
 ## 📊 Model Performance
 
